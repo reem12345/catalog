@@ -1,0 +1,153 @@
+
+* {
+	font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	
+}
+
+h1 {
+	font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	color: #EFEEED;
+	line-height: 60px;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 24px;
+	color: #42C3C9;
+	line-height: 29px;
+}
+
+h3 {
+	font-size: 18px;
+	color: #4A4A4A;
+
+}
+ p {
+ 	font-family: "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ 	font-weight: 400;
+ }
+
+ strong {
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ }
+
+ a {
+ 	font-size: 14px;
+ 	color: #0093B9;
+ 	line-height: 17px;
+ }
+.padding-top {
+	padding-top: 30px;
+}
+.padding-bottom {
+	padding-bottom: 30px;
+}
+.margin-right {
+	margin-right: 30px;
+}
+.padding-none {
+	padding: 0;
+}
+.btn {
+	padding: 20px;
+	margin: 0;
+	border-color: #E2B6AA;
+	border-width: 2px;
+	color: #E2B6AA;
+}
+.btn:hover {
+	border-color: #E2B6AA;
+}
+.btn.delete {
+	border-color: #E2B6AA;
+	
+}
+.btn.delete:hover {
+	border-color:#E2B6AA;
+	
+}
+.glyphicon {
+	margin-right: 10px;
+}
+.top-menu {
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+}
+.top-menu p {
+	margin-bottom: 0;
+	line-height: 16px;
+}
+.top-menu a {
+	margin-bottom: 0;
+	line-height: 16px;
+	font-size: 16px;
+	color: #7B7573;
+	font-weight: 400;
+}
+.divider {
+	height: 15px;
+}
+
+.banner.main {
+	height: 150px;
+	background-color: #3D4A39;
+	
+}
+.banner.menu {
+	height: 150px;
+	background-color: #E2B6AA;
+}
+.banner.profile {
+	height: 150px;
+	background-color: #A6E8EB;
+}
+.banner h1 {
+	margin: 45px 0;
+}
+ .category-list {
+ 	background-color: #ffffff;
+ 	
+ }
+ .category-list:hover {
+ 	background-color: #8F9F88;
+}
+.categories {
+
+}
+.menu-item {
+	background: #ffffff;
+	padding: 20px;
+	margin: 20px;
+	margin-left: -20px;
+}
+.flash {
+	background-color: #E2B6AA;
+	text-decoration: none;
+	text-align: center;
+
+}
+
+.flash li {
+	list-style-type: none;
+	text-align: center;	
+}
+
+.creator {
+	padding-right: 20px;
+	margin-top: -40px;
+	text-align: right;
+	float:right;
+	font-size: 18px;
+}
+.creator img {
+	width: 100px;
+	border-radius: 50%;
+}

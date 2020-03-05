@@ -1,0 +1,57 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="row banner menu">
+   <div class="col-md-11 col-md-offset-1 padding-none">
+      <h1>{{ category.name }} Books
+            <figure class="creator">
+                  <img src="{{ url_for('static', filename='blank_user.gif') }}">
+                  <figcaption> Menu creator's: {{creator.name}} </figcaption>
+               </figure>
+      </h1>
+   </div>
+</div>
+{% if items !=[] %}	
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+   {% for i in items %}
+   <div class="menu-item">
+      <img class="img-responsive" src="{{ i.picture }}">
+      <h3>Title: {{i.name}}</h3>
+      <p>Author: {{i.author}}</p>
+      <p>Year of publication: {{i.yearOfEmission}}</p>
+      <p>Number of pages: {{i.numOfPage}}</p>
+      <p>PDF link:
+         <a href = "{{i.file_link}}">
+         {{i.file_link}}
+         </a>
+      </p>
+      <a href='{{url_for('editMenuItem', category_id = category.id, menu_id=i.id ) }}'>Edit</a> | 
+      <a href='{{url_for('deleteMenuItem', category_id = category.id, menu_id=i.id ) }}'>Delete</a>
+   </div>
+   {% endfor %}
+</div>
+{% endif %}
+<div class="row padding-top padding-bottom">
+   <div class="col-md-1"></div>
+   <div class="col-md-11 padding-none">
+      <a href="{{url_for('editCategory', category_id = category.id )}}">
+      <button class="btn btn-default" id="new-book">
+      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Edit Category
+      </button>
+      </a>
+      <a href="{{url_for('newMenuItem', category_id = category.id )}}">
+      <button class="btn btn-default" id="new-book">
+      <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>Add book
+      </button>
+      </a>
+      <a href="{{url_for('deleteCategory', category_id = category.id )}}">
+      <button class="btn btn-default delete" id="delete-category">
+      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete Category
+      </button>
+      </a>
+   </div>
+   <div class="col-md-7"></div>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="row banner menu">
+   <div class="col-md-10 padding-20 padding-bottom">
+      <h1>{{ category.name }}
+         Books
+      </h1>
+   </div>
+</div>
+<div class="row padding-top ">
+   <div class="col-md-1"></div>
+   <div class="col-md-11 padding-none">
+   </div>
+   <div class="col-md-7"></div>
+</div>
+{% if items !=[] %}	
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+   {% for i in items %}
+   <div class="menu-item">
+      <img class="img-responsive" src="{{ i.picture }}">
+      <h3>Title: {{i.name}}</h3>
+      <p>Author: {{i.author}}</p>
+      <p>Year of publication: {{i.yearOfEmission}}</p>
+      <p>Number of pages: {{i.numOfPage}}</p>
+      <p>PDF link:
+         <a href = "{{i.file_link}}">
+         {{i.file_link}}
+         </a>
+      </p>
+   </div>
+   {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

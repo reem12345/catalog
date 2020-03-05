@@ -1,0 +1,48 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="row divider green">
+   <div class="col-md-12"></div>
+</div>
+<div class="row banner menu">
+   <div class="col-md-11 col-md-offset-1 padding-none">
+      <h1>Edit Book</h1>
+   </div>
+</div>
+<div class="row">
+   <div class="col-md-6 col-md-offset-1 padding-top">
+      <form action="#" method = "post">
+         <div class="form-group">
+            <label for="name">Name:</label>
+            <input type ="text" maxlength="50" class="form-control" name="name" value="{{item.name}}" required >
+         </div>
+         <div class="form-group">
+            <label for="name">Author:</label>
+            <input type ="text" maxlength="50" class="form-control" name="author" required>
+         </div>
+         <div class="form-group">
+            <label for="file_link">PDF link:</label>
+            <textarea class="form-control" maxlength="300" rows="3" name="file_link" value="{{item.file_link}}"></textarea>
+         </div>
+         <div class="form-group">
+            <label for="picture">Image Address link:</label>
+            <textarea class="form-control" maxlength="300" rows="3" name="picture" value="{{item.picture}}"></textarea>
+         </div>
+         <div class="form-group">
+            <label for="yearOfEmission">Year Of Publication:</label>
+            <textarea class="form-control" maxlength="300" rows="3" name="yearOfEmission" value="{{item.yearOfEmission}}"></textarea>
+         </div>
+         <div class="form-group">
+            <label for="numOfPage">Number of Pages:</label>
+            <textarea class="form-control" maxlength="300" rows="3" name="numOfPage" value="{{item.numOfPage}}" ></textarea>
+         </div>
+         <button type="submit" class="btn btn-default" id="submit" type="submit">
+         <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Save</button>
+         <a href = '{{url_for('showCategories')}}'>
+         <button class="btn btn-default delete">
+         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel</button>
+         </a>
+      </form>
+   </div>
+</div>
+{% endblock %}
